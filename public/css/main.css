@@ -1,0 +1,119 @@
+.navbar-default {
+    
+    
+    background: #fff;
+    
+    min-height: 83px;
+}
+
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{
+    
+    min-height: 83px;
+}
+
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
+    
+    min-height: 83px;
+}
+
+.navbar-collapse.in{
+    
+    overflow-y: visible;
+}
+
+.navbar-toggle {
+    
+    margin-top: 30px;
+}
+.navbar-default .navbar-nav>li>a {
+    
+    
+    color:#3e3d49;
+}
+
+
+.navbar-default .navbar-nav>li>a:hover{
+    color:#cfbb3f;
+}
+
+
+.navbar-default .navbar-nav>.active>a{
+    
+    background: #fff;
+    color:#cfbb3f;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    
+    background: #fff;
+    color:#cfbb3f;
+}
+
+
+.navbar>.container-fluid .navbar-brand {
+    
+    padding-top: 2px;
+}
+
+.navbar-right{
+    
+    margin-top:30px;
+}
+
+#brand-name{
+    
+    position: relative;
+    margin-left:10px;
+    top: 10px;
+    font-weight: 900;
+    font-size: 1.0em;
+}
+
+
+.slider{
+    
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 170px;
+}
+
+.slides{
+    
+    width:auto;
+}
+
+.slide{
+    
+position: absolute;
+ display: inline-block;
+ 
+ width: 15%;
+    
+ height: 150px;
+    
+    
+}
+
+#box-1{
+    background-color:green;
+ left:13.7%;
+}
+
+#box-2{
+    background-color:red;
+    left:42.4%
+    
+}
+
+#box-3{
+    background-color:blue;
+   left:71.1%;
+}
+
+
+#box-4{
+    background-color:orange;
+   left:99.8%;
+}
+
