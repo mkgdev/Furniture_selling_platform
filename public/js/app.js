@@ -5,7 +5,7 @@ $(".ui.dropdown").hover(function()
                        
 );
 
-$(".ui .dropdown .item").hover(function()
+$(".ui.dropdown .menu .item").hover(function()
 {
     
     $(this).toggleClass("hower");
