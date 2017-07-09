@@ -149,7 +149,10 @@ html, body{
     top: 31%;
     left:15%;
     color: #F5F2F7;
-   
+    .ui-grid >img{
+        height: auto;
+        width: auto;
+    }
 
 ;
 }
