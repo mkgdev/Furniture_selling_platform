@@ -1,30 +1,48 @@
+html, body{
+    
+    
+    height: 100%;
+}
+
+
+
 .navbar-default {
     
     
     background: #fff;
     
-    min-height: 83px;
+
+    
+    margin-bottom: 0px;
 }
 
+/*
 .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{
     
     min-height: 83px;
 }
+*/
 
+/*
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
     
     min-height: 83px;
 }
+*/
 
+/*
 .navbar-collapse.in{
     
     overflow-y: visible;
 }
+*/
 
+/*
 .navbar-toggle {
     
     margin-top: 30px;
 }
+*/
 .navbar-default .navbar-nav>li>a {
     
     
@@ -50,6 +68,7 @@
 }
 
 
+/*
 .navbar>.container-fluid .navbar-brand {
     
     padding-top: 2px;
@@ -59,7 +78,9 @@
     
     margin-top:30px;
 }
+*/
 
+/*
 #brand-name{
     
     position: relative;
@@ -68,52 +89,77 @@
     font-weight: 900;
     font-size: 1.0em;
 }
+*/
 
 
-.slider{
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
     
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: 170px;
-}
-
-.slides{
-    
-    width:auto;
-}
-
-.slide{
-    
-position: absolute;
- display: inline-block;
- 
- width: 15%;
-    
- height: 150px;
-    
+    width:100%;
+    height: 100%;
+    margin-top:0px;
+    opacity:0.9;
     
 }
 
-#box-1{
-    background-color:green;
- left:13.7%;
+.carousel,.item,.active{height:100%;}
+
+.carousel-inner{height:100%;}
+
+.carousel-indicators{
+    
+    bottom:30px;
 }
 
-#box-2{
-    background-color:red;
-    left:42.4%
+
+.ui.dropdown{
+    
+    margin-top:14.5px;
+}
+
+
+
+.ui.dropdown a{
+    display: inline-block;
+    color:black;
+    width:100%;
+    height: auto;
+}
+
+.ui.dropdown a:hover{
+    
+    color:#cfbb3f;
     
 }
-
-#box-3{
-    background-color:blue;
-   left:71.1%;
+.hower {
+    
+    color:#cfbb3f;
 }
 
 
-#box-4{
-    background-color:orange;
-   left:99.8%;
+#jumbotron-landing  {
+    
+    
+    position:absolute;
+    
+   
+    margin: 0 auto;
+    background-color: transparent;
+    
+    text-align: center;
+    top: 31%;
+    left:15%;
+    color: #F5F2F7;
+   
+
+;
 }
 
+#jumbotron-landing .caption {
+    
+    text-shadow:  2px 1px 10px black;
+}
+
+#jumbotron-landing>p{
+ text-shadow:     3px 3px 15px black;
+
+}
