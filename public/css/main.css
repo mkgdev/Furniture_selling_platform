@@ -104,7 +104,10 @@ html, body{
     top: 23%;
     left:17%;
     color: #F5F2F7;
-   
+    .ui-grid >img{
+        height: auto;
+        width: auto;
+    }
 
 ;
 }
