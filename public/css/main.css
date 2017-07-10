@@ -4,7 +4,15 @@ html, body{
     height: 100%;
 }
 
+.info{
+    display: inline-block;
+    
+}
 
+.address img{
+    width: 230px;
+    height: 210px;
+}
 
 .navbar-default {
     
@@ -13,7 +21,7 @@ html, body{
     
 
     
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 
@@ -67,7 +75,19 @@ html, body{
     
     margin-top:14.5px;
 }
+.row{
+    height: 100%;
+    width: 100%;
+}
 
+.thumbnail img{
+    height: 100%;
+    width: 100%;
+}
+.col{
+    height: 200px;
+    width: 200px;
+}
 
 
 .ui.dropdown a{
@@ -111,7 +131,15 @@ html, body{
 
 ;
 }
-
+.heading h2{
+    border: 1px solid gray;
+}
+.jumbotron{
+    background: gray;
+    color: aliceblue;
+    padding-top: 2px;
+   
+}
 #jumbotron-landing .caption {
     
     text-shadow:  2px 1px 10px black;

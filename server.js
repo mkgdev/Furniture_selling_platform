@@ -31,6 +31,14 @@ app.get("/about", function(req, res){
    res.render("about"); 
 });
     
+app.get("/hfinishing", function(req, res){
+   res.render("hfinishing"); 
+});
+    
+app.get("/view_all_products", function(req, res){
+   res.render("view_all_products"); 
+});
+    
     
     
 
