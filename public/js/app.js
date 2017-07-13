@@ -6,20 +6,44 @@ $(".ui.dropdown").hover(function()
                        
 );
 
-$(".ui.dropdown .menu .item").hover(function()
+
+
+
+$(".ui.dropdown .menu>.item").hover(function()
 {
-    
-    $(this).toggleClass("hower");
+    console.log('Inside');
+  $(this).find('a').toggleClass('hower');
     
 }
+
+);
                               
                               
+
+
+$('.ui.dropdown .menu2').on('click',function()        //Bug fix 
+                                                     //*Page was not redirecting when div 'item' is selected instead of '   'a'
+                           
+                           
+{
+    
+    
+    var url = $(this).find('a').attr('href');  // getting the href value of div>a
+    
+    $(location).attr('href',url);  // redirecting to href value
+    
+}
+                          
+                          
 );
 
 
  //make image height equal
 
-    var imgmaxht = 0;  // maximum image height
+function resizeImage()
+
+{
+     var imgmaxht = 0;  // maximum image height
     $('.thumbnail-product img').each(function()
                                     
     {
@@ -36,10 +60,18 @@ $(".ui.dropdown .menu .item").hover(function()
 
 
       $('.thumbnail-product img').height(imgmaxht);
+    
+    
+    
+}
+
+   
 
 //make same  height of caption
 
-
+function resizeCaption()
+{
+    
     var capmaxht = 0;  // maximum image height
     $('.thumbnail-product .caption').each(function()
                                     
@@ -57,6 +89,9 @@ $(".ui.dropdown .menu .item").hover(function()
 
 
       $('.thumbnail-product .caption').height(capmaxht);
+    
+}
+    
 
 
 //getFromStrorage function to get and set value in localstorage
@@ -104,4 +139,20 @@ $.when($('[name="optionsRadios"]').on('change', function()
   $('[value="'+value+'"]').prop('checked','true');  //set the current radio button checked
 });
 
+
+
+//Animate window 
+$(window).on('load', function()
+{
+    
+    
+     resizeImage();
+    resizeCaption();
+    console.log('hello');
+    $('body').animate({
+        
+        opacity:'1.0'
+    },500);
+    
+});
 
