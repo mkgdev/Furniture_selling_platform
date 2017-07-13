@@ -59,24 +59,49 @@ $(".ui.dropdown .menu .item").hover(function()
       $('.thumbnail-product .caption').height(capmaxht);
 
 
-
-//Returning the value of radios button
-
-//$('[name="optionsRadios"]').prop('checked');
+//getFromStrorage function to get and set value in localstorage
 
 
-//Sending a Post request to server when radio button selected
-$('[name="optionsRadios"]').on('change', function()
+function getFromStorage()  // required to save the current radio button checked which will be extracted after reload of page
 {
-     $(this).prop('checked','true');
-
-    $('#radio-form').submit();
-  
-
-
+    
+    return {
         
+        set : function(key ,value)
+        {
+            localStorage.setItem(key, value);
+        },
+        
+        get : function(key)
+        
+         {
+             return localStorage.getItem(key);
+         }
+    };
+    
+}
+
+$.when($('[name="optionsRadios"]').on('change', function()
+{
+    
+    getFromStorage().set("Cur_radio", $(this)[0].value);
+    
+    $('#radio-form').submit();
+
+  
 }
 
                               
                               
-);
+)
+).then(function()
+      
+      {
+     
+    var value=getFromStorage().get('Cur_radio'); //value extracted from localStorage
+   
+    
+  $('[value="'+value+'"]').prop('checked','true');  //set the current radio button checked
+});
+
+
