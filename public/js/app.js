@@ -1,3 +1,4 @@
+
 $(".ui.dropdown").hover(function()
 {
    $(this).toggleClass("hower");
@@ -58,32 +59,24 @@ $(".ui.dropdown .menu .item").hover(function()
       $('.thumbnail-product .caption').height(capmaxht);
 
 
-////setting  the position of info button at the same level
-//
-//var parentY; //total Y distance + height of element ;
-//var childY;
-//var distance=0; // distance between bottom of parent and child
-//
-//
-//$('.thumbnail-product .caption').each(function()
-//{
-//   
-//     parentY=$(this).offset().top+$(this).height();
-//    
-// childY =   $(this).find('a').offset().top+$('.thumbnail-product .caption a').height();
-//    
-//
-//    
-//    distance = parentY-childY;
-//      
-//      $(this).find('a').css({
-//          
-//          marginBottom : '-='+String(distance)
-//      })
-//   
-//    
-//}
-//);
+
+//Returning the value of radios button
+
+//$('[name="optionsRadios"]').prop('checked');
 
 
+//Sending a Post request to server when radio button selected
+$('[name="optionsRadios"]').on('change', function()
+{
+     $(this).prop('checked','true');
 
+    $('#radio-form').submit();
+  
+
+
+        
+}
+
+                              
+                              
+);

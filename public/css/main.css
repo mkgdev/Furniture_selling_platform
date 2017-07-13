@@ -250,3 +250,9 @@ word-wrap: break-word;
     width: 100%;
     border : 0.1px solid  #d4d1d1;
 }
+
+
+.radio label{
+    
+    margin-bottom: 10px;
+}

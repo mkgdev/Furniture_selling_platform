@@ -4,13 +4,30 @@ var router = require('express').Router(),
 
 
 
+var productVariety='All';
 
+router.post('/products/variety', function(req, res)  //Getting the value of Cateogries from Radios buttons
+{
+
+     
+    productVariety= req.body.optionsRadios;
+    
+    console.log(productVariety);
+    
+    res.redirect('/products/beds');
+
+}
+           
+           
+);
 
 
 router.get("/products/beds", function(req, res)
 {  
-
-    Product.find({},function(err, product)
+  
+  if(productVariety==='All')
+      {
+    Product.find({},function(err, product)   //getting all products
     {
     
      if(err)
@@ -23,6 +40,27 @@ router.get("/products/beds", function(req, res)
     
     }
     );
+          
+          
+      }
+    else{
+       
+        Product.find({variety:productVariety},function(err, product)    //getting a specific product depending on variety
+    {
+    
+     if(err)
+    {
+        console.log("not responding");
+        return console.log(err);
+    }
+    
+   res.render("../views/product/beds",{Product:product});
+    
+    }
+    );
+        
+        
+    }
     
    
 
