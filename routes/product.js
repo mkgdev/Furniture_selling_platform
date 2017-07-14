@@ -12,7 +12,8 @@ router.post('/products/variety', function(req, res)  //Getting the value of Cate
      
     productVariety= req.body.optionsRadios;
     
-    console.log(productVariety);
+    console.log('variety',productVariety);
+    
     
     res.redirect('/products/beds');
 

@@ -11,7 +11,6 @@ $(".ui.dropdown").hover(function()
 
 $(".ui.dropdown .menu>.item").hover(function()
 {
-    console.log('Inside');
   $(this).find('a').toggleClass('hower');
     
 }
@@ -120,16 +119,79 @@ function getFromStorage()  // required to save the current radio button checked 
 $.when($('[name="optionsRadios"]').on('change', function()
 {
     
-    getFromStorage().set("Cur_radio", $(this)[0].value);
+    getFromStorage().set("Cur_radio", $(this)[0].value);   //gettting value and storing the selected option to 
+                                                        //localStorage
     
-    $('#radio-form').submit();
+    
+    var radioValue= $('.radio-form').serializeArray()[0].value;
+    
+    $.post('/products/variety',{
+        optionsRadios:radioValue
+        
+    },function()
+          {
+           console.log('successfully posted');
+        
+           $('.product-grid').animate({opacity:'0'},1000,function()
+            {
+               
+               var htmlData;
+        
+                    $.ajax({
+                   method:'GET',
+                   url : '/products/beds',
+                   
+                   success: function(data)
+                   {
+                       
+                       htmlData=$($.parseHTML(data)).find('.product-grid')[0].innerHTML;
 
-  
+                   }   
+                   
+               });
+               
+               
+                setTimeout(function()     //cant use this because it will be out of scope as setTimeout is used
+               {
+                
+               
+                 $('.product-grid').html(htmlData);
+
+                    
+                     $(window).ready(function()       // window.load function not wokring
+                    
+                    {
+                        
+                        console.log('done');
+                         
+                          resizeImage(); //resizing the image again
+                          resizeCaption();   //resizing the caption
+                         
+                         $('.product-grid').animate({opacity:'1.0'},1000);
+                    }
+                        );       
+                    
+          
+
+                         
+                                           
+                
+                }, 2000);
+               
+            }
+                                           
+                                           
+            );
+           
+    
+    });
+    
+
 }
 
                               
                               
-)
+) 
 ).then(function()
       
       {
@@ -142,18 +204,32 @@ $.when($('[name="optionsRadios"]').on('change', function()
 
 
 
-//Animate window 
+
+//Animate window
+
 $(window).on('load', function()
 {
     
     
      resizeImage();
     resizeCaption();
-    console.log('hello');
     $('body').animate({
         
         opacity:'1.0'
     },500);
     
 });
+
+
+$(window).on('unload', function()
+{
+    
+    setTimeout(function(){localStorage.clear();}, 240000);
+
+
+}
+            
+);
+
+
 
