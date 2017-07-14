@@ -21,11 +21,12 @@ $(".ui.dropdown .menu>.item").hover(function()
                               
 
 
-$('.ui.dropdown .menu2').on('click',function()        //Bug fix 
+$('.ui.dropdown .menu').on('click',function()        //Bug fix 
                                                      //*Page was not redirecting when div 'item' is selected instead of '   'a'
                            
                            
 {
+    
     
     
     var url = $(this).find('a').attr('href');  // getting the href value of div>a
