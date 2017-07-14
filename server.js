@@ -1,50 +1,44 @@
 var express     =require("express"),
-    app         =express();
+    app         =express(),
+    bodyParser  =require('body-parser'),
+    mongoose    =require("mongoose"),
+    
+    
+    
+    //Routes
+    
+    indexRoute = require("./routes/index.js"),
+    productRoute = require('./routes/product.js');
+    
+    
 
-
+app.use(bodyParser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 
 app.use(express.static(__dirname+"/public"));
+mongoose.connect("mongodb://localhost/RCG_furniture")
 
 
 
-//Routes
+//================================
+//    Routes Configuration
+//=================================
 
-app.get("/" , function(req, res)
-       
-{
-   res.render("index");
-  
+app.use(indexRoute);
+app.use(productRoute);
 
-}      
-);
+//*********************************
 
-app.get("/products", function(req, res){
-   res.render("products"); 
-});
 
-app.get("/contact", function(req, res){
-   res.render("contact"); 
-});
 
-app.get("/about", function(req, res){
-   res.render("about"); 
-});
-    
-app.get("/hfinishing", function(req, res){
-   res.render("hfinishing"); 
-});
-    
-app.get("/view_all_products", function(req, res){
-   res.render("view_all_products"); 
-});
-    
-    
-    
-
+//=====================
+// Listening Port
+//=====================
 app.listen(2000, function()           
 {
     
    console.log("Server is started on port : 2000"); 
     
 });
+
+//**********************

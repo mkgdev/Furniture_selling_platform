@@ -1,7 +1,15 @@
-html, body{
+html{
+    
+    height: 100%;
+    
+}
+
+body{
     
     
     height: 100%;
+    opacity: 0.0;
+    
 }
 
 .info{
@@ -9,19 +17,21 @@ html, body{
     
 }
 
+/*
 .address img{
     width: 230px;
     height: 210px;
 }
+*/
 
 .navbar-default {
     
     
     background: #fff;
     
+    margin-bottom: 0px;
 
-    
-    margin-bottom: 10px;
+/*    height: 9%;*/
 }
 
 
@@ -41,12 +51,22 @@ html, body{
     
     background: #fff;
     color:#cfbb3f;
+    height: 48px;
 }
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
     
     background: #fff;
     color:#cfbb3f;
+}
+
+.navbar-default .navbar-collapse {
+    overflow-y: visible;
+}
+
+.container-fluid{
+/*    height: 100%;*/
+    padding-top:0.8%;
 }
 
 
@@ -63,31 +83,39 @@ html, body{
 
 .carousel,.item,.active{height:100%;}
 
+/*.carousel{margin-top:-10px;}*/
+
 .carousel-inner{height:100%;}
 
 .carousel-indicators{
     
-    bottom:30px;
+    bottom:51px;
 }
 
 
 .ui.dropdown{
     
     margin-top:-0.5px;
+    display: block;
 }
-.row{
+/*
+.row{                     // require class
     height: 100%;
     width: 100%;
 }
+*/
 
-.thumbnail img{
+/* 
+.thumbnail img{          //require class
     height: 100%;
     width: 100%;
 }
+*/
 .col{
     height: 200px;
     width: 200px;
 }
+
 
 
 .ui.dropdown a{
@@ -103,11 +131,14 @@ html, body{
     
 }
 
-
 .hower {
     
-    color:#cfbb3f;
+    color:#cfbb3f !important;
 }
+
+
+
+
 
 
 #jumbotron-landing  {
@@ -124,28 +155,115 @@ html, body{
     top: 23%;
     left:17%;
     color: #F5F2F7;
-    .ui-grid >img{
-        height: auto;
-        width: auto;
-    }
+    
+    
+}
 
-;
-}
-.heading h2{
-    border: 1px solid gray;
-}
-.jumbotron{
-    background: gray;
-    color: aliceblue;
-    padding-top: 2px;
-   
-}
 #jumbotron-landing .caption {
     
     text-shadow:  2px 1px 10px black;
 }
 
+
 #jumbotron-landing>p{
  text-shadow:     3px 3px 15px black;
 
+}
+
+    .ui-grid >img{
+        height: auto;
+        width: auto;
+    }
+
+
+
+.heading h2{
+    border: 1px solid gray;
+}
+
+
+
+.product-beds{
+
+
+    width: 100%;
+    height: 91%;
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(../assets/images/beds.jpeg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+.container-product{
+    
+    position: relative;
+    height: 100%;
+}
+
+
+.jumbotron-product{
+    
+    position: absolute;
+
+    text-align: center;
+    background-color: transparent;
+     color: #F5F2F7;
+    top:25%;
+    margin: 0 auto;
+    
+    
+}
+
+.jumbotron-product>p{
+    text-shadow: 3px 3px 15px black;
+}
+
+.jumbotron-product .caption {
+    
+    
+    text-shadow: 2px 1px 10px black;
+}
+
+
+
+
+.thumbnail-product{
+    border: none;
+   margin-top: 5%;
+    margin-bottom: 0px;
+    text-align: center;
+    position: relative;
+   
+
+}
+
+
+.thumbnail-product .caption{
+word-wrap: break-word;       
+
+}
+
+.thumbnail-product .caption a {
+
+   display: inline-block;
+    
+    position: absolute;
+    
+
+    
+    bottom: 5px;
+    
+}
+
+
+.product-divider{
+    
+    width: 100%;
+    border : 0.1px solid  #d4d1d1;
+}
+
+
+.radio label{
+    
+    margin-bottom: 10px;
 }
